@@ -18,6 +18,11 @@ const productSchema = mongoose.Schema({
     viernes: { type: Number, default: 0 },
     sabado: { type: Number, default: 0 },
   },
+  userId: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',  
+    required: true, 
+  },
 });
 
 const Product = mongoose.model('Product', productSchema);
